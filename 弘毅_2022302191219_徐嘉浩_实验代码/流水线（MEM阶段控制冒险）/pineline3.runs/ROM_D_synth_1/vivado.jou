@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Jul  9 00:02:18 2024
+# Process ID: 16872
+# Current directory: C:/Users/10733/Desktop/Vivado/Project/pineline3/pineline3.runs/ROM_D_synth_1
+# Command line: vivado.exe -log ROM_D.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ROM_D.tcl
+# Log file: C:/Users/10733/Desktop/Vivado/Project/pineline3/pineline3.runs/ROM_D_synth_1/ROM_D.vds
+# Journal file: C:/Users/10733/Desktop/Vivado/Project/pineline3/pineline3.runs/ROM_D_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ROM_D.tcl -notrace

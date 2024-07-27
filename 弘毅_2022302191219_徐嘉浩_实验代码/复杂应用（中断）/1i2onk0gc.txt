@@ -1,0 +1,43 @@
+__attribute__ ((interrupt)) void interrupt(){ // TODO 该部分单独做成一个汇编文件
+    int cause = 0;
+    __asm__(
+        "addi sp, sp, -16\n\t"
+        "csrrw t0, mcause, x0\n\t"
+        "sw t0, 12(sp)\n\t"
+        "csrrw t0, mepc, x0\n\t"
+        "sw t0, 8(sp)\n\t"
+        "li t1, 0x00000C80\n\t"
+        "csrrw t0, mstatus, t1\n\t"
+        "sw t0, 4(sp)\n\t"
+        "lw %[cause], 12(sp)\n\t"
+
+        "li t1, 0x00000C88\n\t" // 打开中断
+        "csrrw x0, mstatus, t1\n\t"
+        :[cause] "=r" (cause)
+        :
+        :"memory", "t0", "t1"
+    ); // 汇编保留现场入口
+
+    if(cause == CAUSE_COUNTER){
+        int_counter();
+    }
+    else if(cause == CAUSE_SW){
+        int_sw();
+    }
+
+    __asm__(
+        "li t1, 0x00000C80\n\t" // 关闭中断
+        "csrrw x0, mstatus, t1\n\t"
+
+        "lw t0, 12(sp)\n\t"
+        "csrrw x0, mcause, t0\n\t"
+        "lw t0, 8(sp)\n\t"
+        "csrrw x0, mepc, t0\n\t"
+        "lw t0, 4(sp)\n\t"
+        "csrrw x0, mstatus, t0\n\t"
+        "addi sp, sp, 16\n\t"
+        :
+        :
+        :"memory", "t0", "t1"
+    ); // 汇编恢复现场出口
+}

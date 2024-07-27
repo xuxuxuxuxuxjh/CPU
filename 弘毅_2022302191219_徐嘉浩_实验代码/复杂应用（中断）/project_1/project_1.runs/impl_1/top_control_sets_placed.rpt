@@ -1,0 +1,134 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Jul 18 16:53:44 2024
+| Host         : Owen running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    56 |
+|    Minimum number of control sets                        |    56 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    64 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    56 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    49 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             152 |           65 |
+| No           | No                    | Yes                    |             747 |          223 |
+| No           | Yes                   | No                     |              10 |            8 |
+| Yes          | No                    | No                     |            1551 |          367 |
+| Yes          | No                    | Yes                    |            1332 |          659 |
+| Yes          | Yes                   | No                     |              32 |           11 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------+---------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|                  Clock Signal                  |                   Enable Signal                   |              Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------+---------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|  U5_Multi_8CH320_BUFG                          |                                                   |                                           |                1 |              1 |         1.00 |
+|  clkdiv_BUFG[6]                                |                                                   |                                           |                1 |              1 |         1.00 |
+|  clkdiv_BUFG[6]                                |                                                   | U1_SCPU/U_RF/rstn                         |                1 |              2 |         2.00 |
+|  U6_SSeg7/flash_IBUF_BUFG                      |                                                   |                                           |                4 |              4 |         1.00 |
+|  U1_SCPU/U_Detect/NPCOp_out_inferred__0/i__n_2 |                                                   |                                           |                1 |              4 |         4.00 |
+|  Clk_CPU_BUFG                                  | rstn_IBUF                                         | U1_SCPU/U_int_judger/int_addr[8]_i_1_n_2  |                2 |              5 |         2.50 |
+|  U6_SSeg7/flash_IBUF_BUFG                      | U6_SSeg7/seg_sout[7]_i_1_n_0                      |                                           |                5 |              8 |         1.60 |
+|  Clk_CPU_BUFG                                  | rstn_IBUF                                         | U1_SCPU/U_int_judger/int_addr[31]_i_1_n_2 |                9 |             27 |         3.00 |
+|  n_0_3089_BUFG                                 |                                                   |                                           |               22 |             32 |         1.45 |
+|  n_1_3199_BUFG                                 |                                                   |                                           |               14 |             32 |         2.29 |
+|  Clk_CPU_BUFG                                  | U11_int_controller/btn_time0                      | U1_SCPU/U_RF/rstn                         |                8 |             32 |         4.00 |
+|  Clk_CPU_BUFG                                  | U1_SCPU/U_int_judger/count_time0                  | U1_SCPU/U_RF/rstn                         |                8 |             32 |         4.00 |
+|  Clk_CPU_BUFG                                  | U1_SCPU/U_int_judger/mpc                          |                                           |                5 |             32 |         6.40 |
+|  clkdiv_BUFG[6]                                | U9_Counter_x/counter0[31]                         | U1_SCPU/U_RF/rstn                         |               10 |             32 |         3.20 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/E[0]                     | U1_SCPU/U_RF/rstn                         |               15 |             32 |         2.13 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__2[0]   | U1_SCPU/U_RF/rstn                         |               18 |             32 |         1.78 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__2_0[0] | U1_SCPU/U_RF/rstn                         |               22 |             32 |         1.45 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__3[0]   | U1_SCPU/U_RF/rstn                         |               16 |             32 |         2.00 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__4_0[0] | U1_SCPU/U_RF/rstn                         |               18 |             32 |         1.78 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__4_2[0] | U1_SCPU/U_RF/rstn                         |               11 |             32 |         2.91 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__3_0[0] | U1_SCPU/U_RF/rstn                         |               19 |             32 |         1.68 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__1[0]   | U1_SCPU/U_RF/rstn                         |               14 |             32 |         2.29 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__1_0[0] | U1_SCPU/U_RF/rstn                         |               19 |             32 |         1.68 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__2_1[0] | U1_SCPU/U_RF/rstn                         |               18 |             32 |         1.78 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__3_1[0] | U1_SCPU/U_RF/rstn                         |               16 |             32 |         2.00 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__1_1[0] | U1_SCPU/U_RF/rstn                         |               13 |             32 |         2.46 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__3_2[0] | U1_SCPU/U_RF/rstn                         |               15 |             32 |         2.13 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__4[0]   | U1_SCPU/U_RF/rstn                         |               15 |             32 |         2.13 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__4_1[0] | U1_SCPU/U_RF/rstn                         |               21 |             32 |         1.52 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__5[0]   | U1_SCPU/U_RF/rstn                         |               15 |             32 |         2.13 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[67]_2[0]         | U1_SCPU/U_RF/rstn                         |               24 |             32 |         1.33 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__7_2[0] | U1_SCPU/U_RF/rstn                         |               17 |             32 |         1.88 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__7_0[0] | U1_SCPU/U_RF/rstn                         |               15 |             32 |         2.13 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__6[0]   | U1_SCPU/U_RF/rstn                         |               15 |             32 |         2.13 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__7_1[0] | U1_SCPU/U_RF/rstn                         |               18 |             32 |         1.78 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__8[0]   | U1_SCPU/U_RF/rstn                         |               19 |             32 |         1.68 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__6_0[0] | U1_SCPU/U_RF/rstn                         |               18 |             32 |         1.78 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__8_1[0] | U1_SCPU/U_RF/rstn                         |               20 |             32 |         1.60 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__5_1[0] | U1_SCPU/U_RF/rstn                         |               20 |             32 |         1.60 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__9[0]   | U1_SCPU/U_RF/rstn                         |               18 |             32 |         1.78 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__7[0]   | U1_SCPU/U_RF/rstn                         |               21 |             32 |         1.52 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__5_0[0] | U1_SCPU/U_RF/rstn                         |               16 |             32 |         2.00 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__6_1[0] | U1_SCPU/U_RF/rstn                         |               20 |             32 |         1.60 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__8_0[0] | U1_SCPU/U_RF/rstn                         |               18 |             32 |         1.78 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/MEM_WB_GRE_array/out_reg[113]_rep__6_2[0] | U1_SCPU/U_RF/rstn                         |               22 |             32 |         1.45 |
+|  U5_Multi_8CH320_BUFG                          | U4_MIO_BUS/GPIOe0000000_we_OBUF                   | U1_SCPU/U_RF/rstn                         |                9 |             32 |         3.56 |
+|  U5_Multi_8CH320_BUFG                          | U9_Counter_x/counter0_Lock_0                      | U1_SCPU/U_RF/rstn                         |               10 |             32 |         3.20 |
+|  U5_Multi_8CH320_BUFG                          | U4_MIO_BUS/GPIOf0000000_we_OBUF                   | U1_SCPU/U_RF/rstn                         |               14 |             34 |         2.43 |
+|  Clk_CPU_BUFG                                  |                                                   |                                           |               22 |             78 |         3.55 |
+|  clk_IBUF_BUFG                                 |                                                   | U1_SCPU/U_RF/rstn                         |               22 |             80 |         3.64 |
+|  Clk_CPU_BUFG                                  | U1_SCPU/U_Detect/out_reg[132][0]                  | U1_SCPU/U_RF/rstn                         |               54 |            146 |         2.70 |
+|  Clk_CPU_BUFG                                  | U1_SCPU/U_int_judger/upper_int_reg_0[0]           |                                           |               39 |            146 |         3.74 |
+|  U5_Multi_8CH320_BUFG                          |                                                   | U1_SCPU/U_RF/rstn                         |               57 |            240 |         4.21 |
+|  Clk_CPU_BUFG                                  | U1_SCPU/U_int_judger/INT_judge_reg_rep__7_1[0]    |                                           |               91 |            373 |         4.10 |
+|  Clk_CPU_BUFG                                  |                                                   | U1_SCPU/U_RF/rstn                         |              151 |            435 |         2.88 |
+| ~Clk_CPU_BUFG                                  | U1_SCPU/U_int_judger/E[0]                         |                                           |              227 |            992 |         4.37 |
++------------------------------------------------+---------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+
+

@@ -1,0 +1,69 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Jul 26 11:27:09 2024
+# Process ID: 14396
+# Current directory: C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/流水线（EX阶段控制冒险）
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2960 C:\Users\10733\Desktop\作业\大二下\计组\弘毅_2022302191219_徐嘉浩_实验代码\流水线（EX阶段控制冒险）\Pipeline2.xpr
+# Log file: C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/流水线（EX阶段控制冒险）/vivado.log
+# Journal file: C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/流水线（EX阶段控制冒险）\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/流水线（EX阶段控制冒险）/Pipeline2.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/流水线（EX阶段控制冒险）'
+INFO: [Project 1-313] Project file moved from 'C:/Users/10733/Desktop/Vivado/Project/Pipeline2' since last save.
+WARNING: [Project 1-312] File not found as 'C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/I_mem.coe'; using path 'C:/Users/10733/Desktop/Vivado/Project/I_mem.coe' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/D_mem.coe'; using path 'C:/Users/10733/Desktop/Vivado/Project/D_mem.coe' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/test.coe'; using path 'C:/Users/10733/Desktop/Vivado/Project/test.coe' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/my.coe'; using path 'C:/Users/10733/Desktop/Vivado/Project/my.coe' instead.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-312] File not found as 'C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/I_mem.coe'; using path 'C:/Users/10733/Desktop/Vivado/Project/I_mem.coe' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/D_mem.coe'; using path 'C:/Users/10733/Desktop/Vivado/Project/D_mem.coe' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/test.coe'; using path 'C:/Users/10733/Desktop/Vivado/Project/test.coe' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/I_mem.coe'; using path 'C:/Users/10733/Desktop/Vivado/Project/I_mem.coe' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/D_mem.coe'; using path 'C:/Users/10733/Desktop/Vivado/Project/D_mem.coe' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/test.coe'; using path 'C:/Users/10733/Desktop/Vivado/Project/test.coe' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/xilinx/Vivado/2018.1/data/ip'.
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.1
+  **** Build date : Apr  4 2018-19:32:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 26 11:28:12 2024...

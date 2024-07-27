@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Jul 26 11:27:09 2024
+# Process ID: 14396
+# Current directory: C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/流水线（EX阶段控制冒险）
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2960 C:\Users\10733\Desktop\作业\大二下\计组\弘毅_2022302191219_徐嘉浩_实验代码\流水线（EX阶段控制冒险）\Pipeline2.xpr
+# Log file: C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/流水线（EX阶段控制冒险）/vivado.log
+# Journal file: C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/流水线（EX阶段控制冒险）\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/10733/Desktop/作业/大二下/计组/弘毅_2022302191219_徐嘉浩_实验代码/流水线（EX阶段控制冒险）/Pipeline2.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server

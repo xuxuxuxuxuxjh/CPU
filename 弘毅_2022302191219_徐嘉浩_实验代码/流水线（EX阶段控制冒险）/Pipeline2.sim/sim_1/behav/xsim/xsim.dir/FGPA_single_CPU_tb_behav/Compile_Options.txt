@@ -1,0 +1,1 @@
+-wto "a686952544ec412f8baa887ce74f10ff" --incr --debug "typical" --relax --mt "2" -L "blk_mem_gen_v8_4_1" -L "xil_defaultlib" -L "dist_mem_gen_v8_0_12" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "FGPA_single_CPU_tb_behav" "xil_defaultlib.FGPA_single_CPU_tb" "xil_defaultlib.glbl" -log "elaborate.log" 
